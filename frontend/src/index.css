@@ -1,5 +1,5 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
 
 /* layout */
 :root {
@@ -24,22 +24,20 @@ header .container {
   align-items: center;
   justify-content: space-between;
   border-bottom-right-radius: 50%;
-  
 }
 header a {
   color: #333;
   text-decoration: none;
 }
 .topbarImg {
-  width:250px;
+  width: 250px;
   height: 60px;
   margin-left: 30px;
   margin-top: 5px;
   cursor: pointer;
-
 }
 
-.pages{
+.pages {
   max-width: 1400px;
   padding: 20px;
   margin: 0 auto;
@@ -53,11 +51,18 @@ header a {
 }
 .task-details {
   background: #fff;
-  border-radius: 4px;
+  border-radius: 12px;
+  width: 550px;
   margin: 20px auto;
   padding: 20px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.task-details:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #da9090, #d7a0ef);
 }
 .task-details h4 {
   margin: 0 0 10px 0;
@@ -78,10 +83,15 @@ header a {
   padding: 6px;
   border-radius: 50%;
   color: #333;
+  transition: color 0.3s;
+}
+.task-details span:hover {
+  color: #ad379b; /* Adjust the color on hover */
 }
 
 /* new task form */
-label, input {
+label,
+input {
   display: block;
 }
 input {
@@ -128,9 +138,27 @@ input.error {
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-nav a, nav button {
+nav a {
   margin-left: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #eb89c7;
+  background-color: #ad379b;
+  border-radius: 10px;
+  padding: 4px;
+}
+.active {
+  background-color: #ad379b;
+}
+
+nav a,
+nav button {
+  margin-left: 50px;
 }
 nav button {
   background: #fff;
@@ -141,7 +169,6 @@ nav button {
   font-family: "Poppins";
   cursor: pointer;
   font-size: 1em;
-  
 }
 nav button:hover {
   background-color: rgb(238, 162, 225);
@@ -151,7 +178,8 @@ nav button:hover {
 }
 
 /* auth forms */
-form.signup, form.login {
+form.signup,
+form.login {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
@@ -161,4 +189,224 @@ form.signup, form.login {
 /* Add this to your stylesheet */
 .spacer {
   margin-right: 50px; /* Adjust the margin as needed */
+}
+.description-area textarea {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+.welcome-to h1 {
+  display: flex;
+  justify-content: center;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* This ensures the container takes the full height of the viewport */
+}
+.container-description-site {
+  width: 700px;
+  height: 200px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  margin-top: 60px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.container-description-site p {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  color: #333;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.flip-card {
+  margin-right: 70px;
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: solid rgb(238, 162, 225);
+  border-radius: 1rem;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.flip-card-back {
+  background: linear-gradient(to right, #da9090, #d7a0ef);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.nav-links {
+  display: flex;
+  font-size: 18px;
+}
+/* Add these styles to your CSS file */
+
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-form {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ad379b; /* Adjust the color on hover */
+}
+
+.error {
+  color: #e7195a;
+  margin-top: 5px;
+}
+.add-new {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #ad379b;
+}
+.material-symbols-outlined {
+  cursor: pointer;
+  color: var(--primary);
+
+  transition: color 0.3s;
+}
+.material-symbols-outlined:hover {
+  color: #ad379b; /* Adjust the color on hover */
+  background-color: rgb(238, 162, 225);
+}
+
+/*footer*/
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh; /* Adjusted height to 10% of the viewport height */
+  margin-top: 200px; /* Adjusted top margin */
+
+  bottom: 0;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.social-links a:hover {
+  color: #ad379b; /* Change the color on hover to your desired color */
+}
+
+.social-links img {
+  width: 70px; /* Adjust the size of your social icons */
+  height: auto;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+
+  margin-top: 50px;
+  display: flex;
+}
+/* Additional hover effect for the icon container */
+.icon:hover {
+  transform: scale(1.2); /* Scale the icon container on hover */
+}
+.container-description-site:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #da9090, #d7a0ef);
 }
